@@ -10,7 +10,6 @@ btnSearch.addEventListener("click", async () => {
   const inputName = document.getElementById("search").value;
   console.log(inputName);
   await fetchData(inputName);
-  showCards();
 });
 
 const fetchData = async (name = "") => {
