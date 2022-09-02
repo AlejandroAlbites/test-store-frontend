@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/cards.css" />
+    <link rel="stylesheet" href="./styles/navBar.css" />
+    <title>Bsale Store</title>
+  </head>
+  <body>
+    <div>
+      <header>
+        <nav class="nav-header">
+          <div class="nav-header__title-container">
+            <h1 class="nav-header__title">Bsale Store Test</h1>
+            <svg width="24" height="24" class="nav-header__logo-icon">
+              <path
+                d="M20 6h-2V4a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v15c0 1.654 1.346 3 3 3h10c1.654 0 3-1.346 3-3v-1h2c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2zM8 17H6V7h2v10zm6 0h-2V7h2v10zm6-1h-2V8h2v8z"
+              ></path>
+            </svg>
+          </div>
+          <input
+            class="nav-header__search"
+            type="text"
+            id="search"
+            placeholder="Buscar ..."
+          />
+          <button class="nav-header__btn" id="btn-search">Buscar</button>
+          <div>
+            <svg class="nav-header__car-icon" width="24" height="24">
+              <path
+                d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z"
+              ></path>
+              <circle cx="10.5" cy="19.5" r="1.5"></circle>
+              <circle cx="17.5" cy="19.5" r="1.5"></circle>
+            </svg>
+          </div>
+        </nav>
+        <nav class="nav-categories">
+          <div>
+            <ul class="nav-categories__lists">
+              <li class="nav-categories__list nav-categories__list--active">
+                Todos
+              </li>
+              <span>|</span>
+              <li class="nav-categories__list">bebida energetica</li>
+              <span>|</span>
+              <li class="nav-categories__list">pisco</li>
+              <span>|</span>
+              <li class="nav-categories__list">ron</li>
+              <span>|</span>
+              <li class="nav-categories__list">bebida</li>
+              <span>|</span>
+              <li class="nav-categories__list">snack</li>
+              <span>|</span>
+              <li class="nav-categories__list">cerveza</li>
+              <span>|</span>
+              <li class="nav-categories__list">vodka</li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <div class="cards-container" id="items"></div>
+      </main>
+      <footer>footer</footer>
+    </div>
+
+    <template id="template-card">
+      <div>
+        <div class="card">
+          <img
+            src="./styles/sinimagen.png"
+            alt="img-product"
+            class="card__img"
+          />
+          <div class="card__body">
+            <h2 class="card__category">categoria</h2>
+            <h3 class="card__title">titulo</h3>
+            <div class="card__footer">
+              <p class="card__price">precio</p>
+              <button class="card__btn-buy">Comprar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+    <script src="app.js"></script>
+  </body>
+</html>
