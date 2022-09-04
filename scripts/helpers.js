@@ -8,6 +8,7 @@ import {
 } from "./components.js";
 
 const cardsContainer = document.getElementById("items");
+const carIcon = document.getElementById("car-icon");
 
 export const showLoading = (isLoading) => {
   const loading = document.getElementById("loading");
@@ -67,14 +68,21 @@ cardsContainer.addEventListener("click", (e) => {
 const buyProduct = (e) => {
   const btnBuyProduct = e.target;
   if (btnBuyProduct.classList.contains("card__btn-buy")) {
-    notification(true);
+    notification(true, "Se añadió el producto al carrito");
     setTimeout(() => {
       notification(false);
     }, 3000);
   }
   e.stopPropagation();
 };
-export const notification = (isNotificationActive) => {
+export const notification = (isNotificationActive, text) => {
   const divNotification = document.getElementById("notification");
-  divNotification.innerHTML = notificationComponent(isNotificationActive);
+  divNotification.innerHTML = notificationComponent(isNotificationActive, text);
 };
+
+carIcon.addEventListener("click", () => {
+  notification(true, "No disponible por el momento");
+  setTimeout(() => {
+    notification(false);
+  }, 3000);
+});

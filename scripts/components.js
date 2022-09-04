@@ -59,13 +59,12 @@ export const failSearchComponent = (isSearchFail) => {
         `;
 };
 
-export const notificationComponent = (isNotificationActive) => {
-  console.log(isNotificationActive);
+export const notificationComponent = (isNotificationActive, text) => {
   return `
     <div class=${
       isNotificationActive ? "notification" : "notification-disable"
     }>
-    <h2 class="notification__title">Se añadió el producto al carrito</h2>
+    <h2 class="notification__title">${text}</h2>
     <div class="notification__load"></div>
   </div>
   

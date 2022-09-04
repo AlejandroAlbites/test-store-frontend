@@ -1,4 +1,4 @@
-import { setCategories, showLoading } from "./helpers.js";
+import { notification, setCategories, showLoading } from "./helpers.js";
 
 export const getProducts = async (name, category) => {
   let result = { error: false, data: null };
@@ -11,7 +11,13 @@ export const getProducts = async (name, category) => {
 
     if (!data.ok) {
       result.error = true;
-      alert("Ops! ocurrió un problema, por favor intente nuevamente");
+      notification(
+        true,
+        "Ops! ocurrió un problema, por favor intente nuevamente"
+      );
+      setTimeout(() => {
+        notification(false);
+      }, 3000);
       return result;
     }
 
