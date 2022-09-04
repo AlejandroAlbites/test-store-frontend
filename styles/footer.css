@@ -1,0 +1,57 @@
+.footer {
+  position: relative;
+  background-color: coral;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__header {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 8px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.footer__header h2 {
+  cursor: pointer;
+}
+.footer__header h2:hover {
+  text-shadow: 0px 0px 10px white;
+}
+
+.footer__line {
+  width: 80%;
+  height: 2px;
+  background-color: white;
+}
+
+.footer__paragragh {
+  width: 50%;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+}
+
+.footer__icons {
+  fill: white;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+.footer__icon:hover {
+  fill: #cacaca;
+}
+
+.footer__copyright {
+  width: 100%;
+  text-align: center;
+  background-color: rgb(217, 99, 56);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
